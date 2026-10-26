@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="洄夜的文字作品集，收录创意约稿与剧场书写。">
+  <title>Writing — 洄夜的文字作品集</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="site-header">
+      <a class="wordmark" href="#home" aria-label="回到作品列表">WRITING</a>
+      <p class="intro">创意，商业与温度。</p>
+
+      <nav class="filters" aria-label="作品分类">
+        <button class="filter-chip is-active" data-filter="all" type="button">全部</button>
+        <button class="filter-chip" data-filter="创意约稿" type="button">创意约稿</button>
+        <button class="filter-chip" data-filter="新闻稿件" type="button">新闻稿件</button>
+        <button class="filter-chip" data-filter="深度采访" type="button">深度采访</button>
+        <button class="filter-chip" data-filter="品牌传播" type="button">品牌传播</button>
+        <button class="filter-chip" data-filter="社媒文案" type="button">社媒文案</button>
+      </nav>
+    </header>
+
+    <section class="work-section" id="home" aria-label="作品列表">
+      <div class="section-rule"></div>
+      <div class="article-list" id="article-list" aria-live="polite"></div>
+    </section>
+
+    <article class="article-view is-hidden" id="article-view" aria-live="polite"></article>
+
+    <footer class="site-footer">
+      <span>洄夜 · 文字作品集</span>
+      <span>戏剧 / 音乐 / 人物</span>
+    </footer>
+  </main>
+  <script src="articles-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
