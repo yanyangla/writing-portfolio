@@ -87,7 +87,7 @@ function renderList(category = "all") {
   list.classList.remove("is-hidden");
   view.classList.add("is-hidden");
   document.querySelector(".work-section").classList.remove("is-hidden");
-  document.title = "Writing — 洄夜的文字作品集";
+  document.title = "YY’S WRITING";
 }
 
 function openArticle(slug, updateAddress = true) {
@@ -101,7 +101,7 @@ function openArticle(slug, updateAddress = true) {
     <div class="meta-line"><span class="category-label">${escapeHTML(article.category)}</span><span>${readingTime(article.content)}</span></div>
     <h1 class="detail-title">${escapeHTML(article.title)}</h1>
     <div class="prose">${markdownToHTML(article.content)}</div>`;
-  document.title = `${article.title} — Writing`;
+  document.title = `${article.title} — YY’S WRITING`;
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
