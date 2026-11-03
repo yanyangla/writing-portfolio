@@ -38,6 +38,7 @@ function markdownToHTML(markdown) {
   let paragraph = [];
   let quote = [];
   const inline = value => escapeHTML(value)
+    .replace(/\[([^\]]+)\]\((https:\/\/[^)\s]+)\)/g, '<a class="source-link" href="$2" target="_blank" rel="noopener noreferrer">$1 ↗</a>')
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
     .replace(/\*(.+?)\*/g, "<em>$1</em>")
     .replace(/`(.+?)`/g, "<code>$1</code>");
@@ -87,7 +88,7 @@ function renderList(category = "all") {
   list.classList.remove("is-hidden");
   view.classList.add("is-hidden");
   document.querySelector(".work-section").classList.remove("is-hidden");
-  document.title = "YY’S WRITING";
+  document.title = "Writing — 洄夜的文字作品集";
 }
 
 function openArticle(slug, updateAddress = true) {
@@ -101,7 +102,7 @@ function openArticle(slug, updateAddress = true) {
     <div class="meta-line"><span class="category-label">${escapeHTML(article.category)}</span><span>${readingTime(article.content)}</span></div>
     <h1 class="detail-title">${escapeHTML(article.title)}</h1>
     <div class="prose">${markdownToHTML(article.content)}</div>`;
-  document.title = `${article.title} — YY’S WRITING`;
+  document.title = `${article.title} — Writing`;
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -127,3 +128,4 @@ articles = window.portfolioArticles || [];
 const initialSlug = decodeURIComponent(location.hash.slice(1));
 if (initialSlug && initialSlug !== "home") openArticle(initialSlug);
 else renderList();
+
