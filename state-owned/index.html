@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="文案作品集，精选新闻报道、政务写作与品牌传播作品。">
+  <title>文案作品集</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="site-header">
+      <a class="wordmark" href="#home" aria-label="回到作品列表">文案作品集</a>
+      <p class="intro">新闻报道、政务写作与品牌传播。</p>
+
+      <nav class="filters" aria-label="作品分类">
+        <button class="filter-chip is-active" data-filter="all" type="button">全部</button>
+        <button class="filter-chip" data-filter="人民日报" type="button">人民日报</button>
+        <button class="filter-chip" data-filter="政协" type="button">政协</button>
+        <button class="filter-chip" data-filter="其他" type="button">其他</button>
+      </nav>
+    </header>
+
+    <section class="work-section" id="home" aria-label="作品列表">
+      <div class="section-rule"></div>
+      <div class="article-list" id="article-list" aria-live="polite"></div>
+    </section>
+
+    <article class="article-view is-hidden" id="article-view" aria-live="polite"></article>
+
+    <footer class="site-footer">
+      <span>文字作品集</span>
+      <span>新闻 / 政务 / 品牌</span>
+    </footer>
+  </main>
+  <script src="articles-data.js?v=soe1"></script>
+  <script src="script.js?v=soe1"></script>
+</body>
+</html>
+
