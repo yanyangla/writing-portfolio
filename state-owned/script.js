@@ -82,7 +82,7 @@ function cardTemplate(article, index) {
   </article>`;
 }
 
-function renderList(category = "all") {
+function renderList(category = "人民日报") {
   const visible = category === "all" ? articles : articles.filter(article => article.category === category);
   list.innerHTML = visible.length ? visible.map(article => cardTemplate(article, articles.indexOf(article))).join("") : '<p class="empty-state">这个分类还没有作品。</p>';
   list.classList.remove("is-hidden");
